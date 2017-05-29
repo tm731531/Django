@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from viewAge.views import viewpage,hello_world,viewpageConfig
-from viewAge.Api import getdata
+from viewAge.views import viewpage,hello_world,viewpageConfig,login
+from viewAge.Api import getdata,getdatas
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello/$', hello_world),
     url(r'^viewpage/$', viewpage),
     url(r'^viewpageConfig/$', viewpageConfig),
+    url(r'^login/$', login),
     url(r'^api/getdata/(\w+)/$', getdata),
+    url(r'^api/getdatas/$', getdatas),
 ]

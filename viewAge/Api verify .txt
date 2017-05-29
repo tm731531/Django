@@ -1,0 +1,42 @@
+API  verify result
+
+
+{
+  "returnData": {
+    "CONTENT_LENGTH": "17",
+    "is_secure": false,
+    "get_port": "8001",
+    "SERVER_PORT": "8001",
+    "FILES": {},
+    "content_params": {},
+    "get_full_path": "/api/getdatas/?query=%27gt%27&iv=%27as%27",
+    "REMOTE_USER": null,
+    "get_host": "192.168.56.101:8001",
+    "HTTP_ACCEPT_LANGUAGE": "en-US,en;q=0.8",
+    "HTTP_HOST": "192.168.56.101:8001",
+    "encoding": null,
+    "content_type": "application/json",
+    "path": "/api/getdatas/",
+    "path_info": "/api/getdatas/",
+    "HTTP_USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36",
+    "session_color": "blue",
+    "session_food": "beef",
+    "REQUEST_METHOD": "POST",
+    "SERVER_NAME": "oralce-VirtualBox",
+    "method": "POST",
+    "COOKIES": {
+      "sessionid": "kurlybe5oef4gqeia3bw1oblgucoinzf"
+    },
+    "body": {
+      "data": "中文"
+    },
+    "HTTP_REFERER": null,
+    "REMOTE_HOST": "",
+    "HTTP_ACCEPT_ENCODING": "gzip, deflate",
+    "QUERY_STRING": "query=%27gt%27&iv=%27as%27",
+    "REMOTE_ADDR": "192.168.56.1",
+    "scheme": "http",
+    "is_ajax": false,
+    "CONTENT_TYPE": "application/json"
+  }
+}
