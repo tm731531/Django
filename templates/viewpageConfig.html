@@ -1,0 +1,32 @@
+<!-- hello_world.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I come from template!!</title>
+        <style>
+            body {
+               background-color: lightyellow;
+            }
+            em {
+                color: LightSeaGreen;
+            } 
+	    gj {
+                color: Blue;
+            }
+        </style>
+    </head>
+ 
+    <body>
+        <h1>My Page Config</h1>
+	server:<em>{{server}}</em><br>
+	user:<em>{{user}}</em><br>
+	password:<em>{{password}}</em><br>
+	data:<em>{{data}}</em><br>
+  	<div id='g9'></div>
+
+        <script type="text/javascript">
+       document.getElementById('g9').innerText='Good morning '+new Date().toLocaleString();
+        </script>
+    </body>
+</html>

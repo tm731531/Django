@@ -1,0 +1,32 @@
+<!-- hello_world.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I come from template!!</title>
+        <style>
+            body {
+               background-color: lightyellow;
+            }
+            em {
+                color: LightSeaGreen;
+            } gj {
+                color: Blue;
+            }
+        </style>
+    </head>
+ 
+    <body>
+        <h1>My Page</h1>
+        <em>{{ current_time }}</em><br>
+{% for x in rowdata %}
+    
+         <em>Title</em>  :  <gj>{{ x.title}}</gj><br>
+{% endfor %}
+  	<div id='g9'></div>
+
+        <script type="text/javascript">
+       document.getElementById('g9').innerText='Good morning '+new Date().toLocaleString();
+        </script>
+    </body>
+</html>
