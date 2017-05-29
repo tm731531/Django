@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from viewAge.views import viewpage,hello_world,viewpageConfig,login
+from viewAge.views import viewpage,hello_world,viewpageConfig,login,form
 from viewAge.Api import getdata,getdatas
 
 urlpatterns = [
@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^viewpage/$', viewpage),
     url(r'^viewpageConfig/$', viewpageConfig),
     url(r'^login/$', login),
+    url(r'^form/$', form),
     url(r'^api/getdata/(\w+)/$', getdata),
     url(r'^api/getdatas/$', getdatas),
 ]

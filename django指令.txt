@@ -8,6 +8,7 @@ python manage.py -h <command_name>	查看 Django commands 的使用方法
 python manage.py runserver	啟動開發伺服器
 python manage.py startapp <app_name>	新增 Django app
 python manage.py migrate        Session無法啟用後下這個指令啟動
+python -m smtpd -n -c DebuggingServer localhost:1025 啟動MAIL SERVER掛在1025 port 發信 
 
 [auth]
     changepassword
