@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 APP_SETTING= {
-    'serverconfig':'192.168.1.2',
+    'serverconfig':'192.168.1.5',
     'userconfig':'ubuntu',
     'passwordconfig':'ubuntu',
     'dbconfig':'Farmdata',
@@ -107,7 +107,7 @@ DATABASES = {
     'default': {
         'NAME': 'Farmdata',
         'ENGINE': 'sqlserver_ado',
-        'HOST': '192.168.1.2\\ss2016',
+        'HOST': '192.168.1.5\\ss2016',
         'USER': 'ubuntu',
         'PASSWORD': 'ubuntu',
     }

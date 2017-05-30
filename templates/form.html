@@ -9,7 +9,8 @@
 
 {% for field in form %}
     <tr class="fieldWrapper">
-        <td>{{ field.name }}  :</td><td> {{ field }}</td>
+        <td>{{ field.name }}  {{ field.label_tag }}  :</td><td> {{ field }}</td>
+
     </tr>
 {% endfor %}
 

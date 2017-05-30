@@ -12,7 +12,7 @@ import json
 def hello_world(request):
     conn = pymssql.connect(settings.APP_SETTING["serverconfig"], settings.APP_SETTING["userconfig"], settings.APP_SETTING["passwordconfig"], settings.APP_SETTING["dbconfig"])
     cursor = conn.cursor()
-    cursor.execute("  select  *   FROM [Farmdata].[dbo].[patentFSecure] " )
+    cursor.execute("  select  *   FROM [patentFSecure] " )
 
     row=cursor.fetchall()
     data=[]
@@ -27,7 +27,7 @@ def getdata(request,data):
     
     conn = pymssql.connect(settings.APP_SETTING["serverconfig"], settings.APP_SETTING["userconfig"], settings.APP_SETTING["passwordconfig"], settings.APP_SETTING["dbconfig"])
     cursor = conn.cursor()
-    cursor.execute("  select  *   FROM [Farmdata].[dbo].[patentFSecure] where patentNo ='%s'"  %data)
+    cursor.execute("  select  *   FROM [patentFSecure] where patentNo ='%s'"  %data)
     row=cursor.fetchall()
     data=[]
 
@@ -41,6 +41,23 @@ def getdata(request,data):
     return JsonResponse( {
         'returnData': data,
     })
+
+def getD3mbostocksourcedata(request):
+    
+    conn = pymssql.connect(settings.APP_SETTING["serverconfig"], settings.APP_SETTING["userconfig"], settings.APP_SETTING["passwordconfig"], settings.APP_SETTING["dbconfig"])
+    cursor = conn.cursor()
+    cursor.execute("  select  *   FROM [D3mbostocksource]")
+    row=cursor.fetchall()
+    data=[]
+
+    for cols in row:
+        arrays={}
+        for i in range(len(cursor.description)):
+            desc = cursor.description[i][0]
+            arrays[desc] = cols[i]
+        data.append(arrays)
+    print(data)
+    return JsonResponse(data , safe=False)
 def getdatas(request):
     returndata={}
     

@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from viewAge.views import viewpage,hello_world,viewpageConfig,login,form
-from viewAge.Api import getdata,getdatas
+from viewAge.views import viewpage,hello_world,viewpageConfig,login,form,D3stockSource
+from viewAge.Api import getdata,getdatas,getD3mbostocksourcedata
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,6 +25,10 @@ urlpatterns = [
     url(r'^viewpageConfig/$', viewpageConfig),
     url(r'^login/$', login),
     url(r'^form/$', form),
+    url(r'^D3stockSource/(\w+)/$', D3stockSource),
     url(r'^api/getdata/(\w+)/$', getdata),
     url(r'^api/getdatas/$', getdatas),
+    url(r'^api/getD3mbostocksourcedata/$', getD3mbostocksourcedata),
+
+
 ]
